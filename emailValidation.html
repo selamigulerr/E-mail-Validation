@@ -1,0 +1,21 @@
+<html>
+<body>
+<form method="post" action="">
+	username:<input type="text"  id="name" onkeyup="validation()">
+	</form>
+</body>
+<script type="text/javascript">
+	function validation(){
+	var username=document.getElementById("name").value;///get id with value 
+	var usernamepattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;////Regular expression
+	if(usernamepattern.test(username))
+	{
+		document.getElementById("name").style.backgroundColor='yellow';
+    }
+    else
+    {
+    	document.getElementById("name").style.backgroundColor='red'; }
+	}
+
+</script>
+</html>
